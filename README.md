@@ -8,6 +8,7 @@ Practice makes perfect right?
 
 After a story has been done you can open a discussion to chat about people's PoV on the story or ask it to me I'll try my best to reply to them
 
+<b>SUBSCRIBE:</b>
 <h3>catwbanjo.github.io/smolstory/feed.xml</h3>
 
 Star goal: 0
