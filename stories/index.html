@@ -2,18 +2,38 @@
     body {
         background-color: white;
         color: black;
-        padding: 0 0;
+        padding: 0;
         border: none;
         margin: 0 0;
     }
+    * {font-family: "Georgia", serif;}
     #topbar {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), transparent);
+        padding: 8px;
         position: fixed;
         width: 100%;
         height: 3rem;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); */
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+    #b20 {
+        padding: 3rem 1.3rem;
     }
 </style>
-
+<head>
+<div id="topbar"><img src="./favicon.png" style="height: 90%;"></img>story archive</div>
+</head>
 <body>
-    <div id="topbar"><img src="./favicon.png"></img></div>
+    <div id="b20">
+    <h1>smolstory story archive</h1>
+    This wiki page WILL contain spoilers! Read this at your own will.
+    <br/><br/>
+    <button style="background-color: transparent; border: none; cursor: pointer; font-size: 1rem;">△ Expand list of archived stories</button>
+    <ul>
+        <h3>Level 1: Placeholder</h3>
+        <li>1. Placeholder</li>
+    </ul>
+    </div>
 </body>
