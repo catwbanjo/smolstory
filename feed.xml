@@ -9,7 +9,8 @@
     <item>
         <title>RSS Feed Test</title>
         <guid>rss-feed-test-000a</guid>
-        <description>Wondering if it works only with a description</description>
+        <link>https://www.google.com</link>
+        <description>RSS Feed Test (->google.com)</description>
     </item>
 </channel>
 
