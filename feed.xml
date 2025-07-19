@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+    <title>Small Stories</title>
+    <link>https://github.com/catwbanjo/smolstory</link>
+    <description>Bite sized stories with a hidden lore</description>
+
+    <item>
+        <title>RSS Feed Test</title>
+        <description>Wondering if it works only with a description</description>
+    </item>
+</channel>
