@@ -1,15 +1,52 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
     body {
+        background-color: white;
+        color: black;
+        padding: 0;
+        border: none;
+        margin: 0 0;
+    }
+    * {font-family: "Winky Rough" ,"Georgia", serif;}
+    #topbar {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+        padding: 1rem;
+        position: fixed;
+        width: 100vw;
+        height: 4rem;
+        /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); */
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        min-height: 80vh;
-        height: 100vh;
-        overflow: hidden;
+        font-size: 1.1rem;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    #b20 {
+        padding: 3rem 1.3rem;
+    }
+    .material-symbols-outlined {
+        cursor: pointer;
     }
 </style>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+<head>
+<div id="topbar"><span class="material-symbols-outlined">home</span><img src="stories/favicon.png" style="height: 2.9rem;" /><span class="material-symbols-outlined">menu</span></div>
+</head>
+<body>
+    <div id="b20">
+    <h1>Hello!</h1>
+    Welcome to the ever-growing collection of my personal stories! This website contains all of my stories, developments, and progressions! New releases drop on the 1st of every month. So stay tuned!
+    <h1>Why?</h1>
+    I wanted to share all my thinking and reasoning that progresses as an author, and a developer.
+    <h1>Where?</h1>
+    You can subscribe to the RSS feed here: <u>catwbanjo.github.io/smolstory/feed.xml</u>
+    <br/>Otherwise, you can check my personal X account: @starsncolors.<br/>
+    Both will keep you notified.
+    <h1>Links?</h1>
+    To stories: <a href="stories/index.html">/stories/</a>,
+    To XML raw feed: <a href="feed.xml">feed.xml</a>,
+    To my X account: <a href="https://x.com/starsncolors">@starsncolors</a>.
 
-
-<h1>Hey!</h1>
-<span>What you're looking for is probably here: <a href="./stories/index.html">/stories</a></span>
+    </ul>
+    </div>
+</body>
