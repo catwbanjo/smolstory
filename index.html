@@ -29,6 +29,7 @@
         box-sizing: border-box;
         position: fixed;
         top: 0;
+        left: 100%;
         width: 100vw;
         min-width: 100vw;
         z-index: 200;
@@ -39,6 +40,7 @@
         letter-spacing: 0.1rem;
         font-size: 1.5rem;
         line-height: 3rem;
+        transition: left 0.1s ease-out;
     }
     ca {
         cursor: pointer;
@@ -59,9 +61,23 @@
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <head>
-<div id="topbar"><span class="material-symbols-outlined" onclick="window.location.href = '/smolstory/'">home</span><img src="stories/favicon.png" style="height: 2.9rem;" /><span class="material-symbols-outlined">menu</span></div>
-<div id="fullmenu"><ca onclick="window.location.href = '/smolstory/about'">About</ca><ca onclick="window.location.href = '/smolstory/stories/index.html'">Archive</ca><ca onclick="window.location.href = '/smolstory/socials'">Social</ca><ca onclick="window.location.href='/smolstory/rss_guide.html'">RSS Feed</ca><ca onclick="window.location.href='/smolstory/contact_me.html'">Contact</ca></div>
+<div id="topbar"><span class="material-symbols-outlined" onclick="window.location.href = '/smolstory/'">home</span><img src="stories/favicon.png" style="height: 2.9rem;" /><span class="material-symbols-outlined" id="menu">menu</span></div>
+<div id="fullmenu"><ca onclick="window.location.href = '/smolstory/about.html'">About</ca><ca onclick="window.location.href = '/smolstory/stories/index.html'">Archive</ca><ca onclick="window.location.href = '/smolstory/socials'">Social</ca><ca onclick="window.location.href='/smolstory/rss_guide.html'">RSS Feed</ca><ca onclick="window.location.href='/smolstory/contact_me.html'">Contact</ca></div>
 </head>
+    <script>
+        var menuOpen = false;
+        const fullmenu = document.querySelector("#fullmenu")
+
+        document.querySelector('#menu').addEventListener('click', () => {
+            if (menuOpen) {
+                fullmenu.style.left = "100%";
+                menuOpen = !menuOpen;
+            } else {
+                fullmenu.style.left = "0%";
+                menuOpen = !menuOpen;
+            }
+        })
+    </script>
 <body>
     <div id="b20">
     <h1>Hello!</h1>
@@ -76,7 +92,6 @@
     To stories: <a href="stories/index.html">/stories/</a>,
     To XML raw feed: <a href="feed.xml">feed.xml</a>,
     To my X account: <a href="https://x.com/starsncolors">@starsncolors</a>.
-
     </ul>
     </div>
 </body>
