@@ -52,33 +52,59 @@
         font-size: 1.8rem;
         color: black;
     }
+        #background {
+        width: 100vw;
+        height: 10rem;
+        background-size: cover;
+        background-position: top;
+        background-image: url('./sky.jpg');
+        mask-image: linear-gradient(to bottom, black 75%, transparent)
+    }
     #b20 {
         padding: 3rem 1.3rem;
+        max-width: 40rem;
+        padding: 0 5rem;
     }
     .material-symbols-outlined {
         cursor: pointer;
     }
+    code {
+        font-family: 'Courier New';
+        color: grey;
+    }
+    #footer {
+        width: 100%;
+        min-width:100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80%;
+        min-height: 10rem;
+    }
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <head>
-<div id="topbar"><span class="material-symbols-outlined" onclick="window.location.href = '/smolstory/'">home</span><img src="stories/favicon.png" style="height: 2.9rem;" /><span class="material-symbols-outlined" id="menu">menu</span></div>
-<div id="fullmenu"><ca onclick="window.location.href = '/smolstory/about.html'">About</ca><ca onclick="window.location.href = '/smolstory/stories/index.html'">Archive</ca><ca onclick="window.location.href = '/smolstory/socials'">Social</ca><ca onclick="window.location.href='/smolstory/rss_guide.html'">RSS Feed</ca><ca onclick="window.location.href='/smolstory/contact_me.html'">Contact</ca></div>
+    <div id="topbar"><span class="material-symbols-outlined" onclick="window.location.href = '/smolstory/'">home</span><img src="stories/favicon.png" style="height: 2.9rem;" /><span class="material-symbols-outlined" id="menu">menu</span></div>
+    <div id="fullmenu"><ca onclick="window.location.href = '/smolstory/about.html'">About</ca><ca onclick="window.location.href = '/smolstory/stories/index.html'">Archive</ca><ca onclick="window.location.href = '/smolstory/socials'">Social</ca><ca onclick="window.location.href='/smolstory/rss_guide.html'">RSS Feed</ca><ca onclick="window.location.href='/smolstory/contact_me.html'">Contact</ca></div>
 </head>
-    <script>
-        var menuOpen = false;
-        const fullmenu = document.querySelector("#fullmenu")
-
-        document.querySelector('#menu').addEventListener('click', () => {
-            if (menuOpen) {
-                fullmenu.style.left = "100%";
-                menuOpen = !menuOpen;
-            } else {
-                fullmenu.style.left = "0%";
-                menuOpen = !menuOpen;
-            }
-        })
+<script>
+    var menuOpen = false;
+    const fullmenu = document.querySelector("#fullmenu")
+    
+    document.querySelector('#menu').addEventListener('click', () => {
+        if (menuOpen) {
+            fullmenu.style.left = "100%";
+            menuOpen = !menuOpen;
+        } else {
+            fullmenu.style.left = "0%";
+            menuOpen = !menuOpen;
+        }
+    })
     </script>
 <body>
+    <div id="background"></div>
     <div id="b20">
     <h1>Hello!</h1>
     Welcome to the ever-growing collection of my personal stories! This website contains all of my stories, developments, and progressions! New releases drop on the 1st of every month. So stay tuned!
@@ -95,3 +121,11 @@
     </ul>
     </div>
 </body>
+<div id="footer">
+    <span style="color: grey">this <b>page</b> was last updated on <span id="lastModified"></span></span>
+    <code>ⓒ lumi 2025</code>
+</div>
+
+<script>
+    document.getElementById('lastModified').textContent = new Date(document.lastModified).toISOString();
+</script>

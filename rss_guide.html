@@ -5,6 +5,7 @@
     body {
         margin: 0 0;
         padding: 0;
+        background-color: white;
     }
     code {
         background-color: #dddddd;
@@ -62,7 +63,15 @@
     }
     #b20 {
         padding: 3rem 1.3rem;
+    }        #background {
+        width: 100vw;
+        height: 10rem;
+        background-size: cover;
+        background-position: top;
+        background-image: url('./sky.jpg');
+        mask-image: linear-gradient(to bottom, black 75%, transparent)
     }
+
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <head>
@@ -83,7 +92,7 @@
         })
     </script>
 </head>
-<body>
+<body><div id="background"></div>
     <div id="b20">
         <h1>Subscribing to RSS feed</h1>
         Read time: &lt;1 min<br/><br/>
@@ -94,7 +103,7 @@
         <h2>Where do I subscribe?</h2>
         You can subscribe to most news sites, blogs that support RSS. You can search for RSS supported websites, or, if you find a RSS button on a website, that is too.
         <h2>How do I subscribe here?</h2>
-        You can subscribe to smolstory by manually adding link: <i>catwbanjo.github.io/smolstory/feed.xml</i> or clicking this button here to get URL: <button onclick="navigator.clipboard.writeText('http://catwbanjo.github.io/smolstory/feed.xml')">Copy URL</button>
-        <h1>TLDR</h1> catwbanjo.github.io/smolstory/feed.xml to syndicate or subscribe
-    </div>
+        You can subscribe to smolstory by manually adding link: <i><code>catwbanjo.github.io/smolstory/feed.xml</code></i> or clicking this button here to get URL: <button onclick="navigator.clipboard.writeText('http://catwbanjo.github.io/smolstory/feed.xml')">Copy URL</button>
+        </div>
+    
 </body>
